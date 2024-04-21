@@ -8,16 +8,13 @@ def user_names():
     print(f"Welcome, {username1} and {username2}! Let's start!\n")
     return username1, username2
 
-user_names()
-
 # Define current player
-
 current_player = "X"
 game_play = True
 winner = None
 
 
-#Drawing a game board using array and index
+#Drawing a game board using array and indexes
 board =["1" ,"2" ,"3",
         "4" ,"5" ,"6" ,
         "7", "8", "9"]
@@ -29,14 +26,13 @@ def game(board):
     print ("----------")
     print(board[6] + " | " + board[7] + " | " + board[8])
 
-game(board)
 
 # Function to check if the current player has won
 def check_winner(board, player):
     # Define the winning combinations
     win_combinations = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],  # Rows
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],  # Columns
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],  # Vertical
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],  # Horizontal
         [0, 4, 8], [2, 4, 6]              # Diagonals
     ]
     # Check each winning condition
@@ -66,6 +62,24 @@ def player_input(board, player_name , player_symbol):
                 print("This place is already taken or the input is invalid")
         else:
             print("Invalid input. Please enter a number.")
+
+# Main game loop
+username1, username2 = user_names()
+game(board)  # Display the initial board
+while True:
+    player_input(board, username1 if current_player == "X" else username2, current_player)
+    if check_winner(board, current_player):
+        winner = current_player
+        break
+    elif check_tie(board):
+        break
+    # Switch players
+    current_player = "O" if current_player == "X" else "X"
+
+# Display the final board
+game(board)
+
+
 
 
 
