@@ -79,6 +79,17 @@ while True:
 # Display the final board
 game(board)
 
+# Announce the winner or tie
+if winner:
+        print(f"Congratulations, {username1 if winner == 'X' else username2}! You win!")
+else:
+        print("It's a tie!")
+    
+play_again = input("Do you want to play again? (yes/no): ").lower()
+if play_again == "yes":
+        game(board)
+else:
+        print("Thanks for playing!")
 
 
 
