@@ -85,9 +85,9 @@ if winner:
 else:
         print("It's a tie!")
     
-play_again = input("Do you want to play again? (yes/no): ").lower()
+play_again = input("Do you want to play again? (y/n): ").lower()
 if play_again == "yes":
-        game(board)
+        user_names()
 else:
         print("Thanks for playing!")
 
