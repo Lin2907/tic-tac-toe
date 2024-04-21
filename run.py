@@ -1,10 +1,22 @@
 import os
 
-# Enter Username
+# Enter Username and displays a message if no valid username is entered
 def user_names():
     print("Hello! Ready to Play?")
-    username1 = input("Enter username for Player 1 (X): ")
-    username2 = input("Enter username for Player 2 (O): ")
+    while True:
+        username1 = input("Enter username - Player 1 (X): ")
+        if username1:
+            break
+        else:
+            print("Enter a valid username for Player 1.")
+
+    while True:
+        username2 = input("Enter username - Player 2 (O): ")
+        if username2:
+            break
+        else:
+            print("Enter a valid username for Player 2.")
+
     print(f"Welcome, {username1} and {username2}! Let's start!\n")
     return username1, username2
 
@@ -16,7 +28,7 @@ def game(board):
     print(board[6] + " | " + board[7] + " | " + board[8])
 
 
-# Function to check if the current player has won
+# Function to check the winner
 def check_winner(board, player):
     # Define the winning combinations
     win_combinations = [
@@ -37,7 +49,7 @@ def check_tie(board):
     return all(pos != "1" and pos != "2" and pos != "3" and pos != "4" and pos != "5" and pos != "6" and pos != "7" and pos != "8" and pos != "9" for pos in board)
 
 # Function to check if player input is valid
-def player_input(board, player_name , player_symbol):
+def player_input(board, player_name, player_symbol):
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         game(board)
@@ -51,6 +63,7 @@ def player_input(board, player_name , player_symbol):
                 print("This place is already taken or the input is invalid")
         else:
             print("Invalid input. Please enter a number.")
+    
 
 # Main game logic
 def main():
