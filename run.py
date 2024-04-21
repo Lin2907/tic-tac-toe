@@ -2,7 +2,7 @@ import os
 
 # Enter Username
 def user_names():
-    print("Hi there! Ready to Play?")
+    print("Hello! Ready to Play?")
     username1 = input("Enter username for Player 1 (X): ")
     username2 = input("Enter username for Player 2 (O): ")
     print(f"Welcome, {username1} and {username2}! Let's start!\n")
@@ -18,13 +18,9 @@ winner = None
 
 
 #Drawing a game board using array and index
-board =["1" , "2" ,"3",
-        "4" , "5" , "6" ,
+board =["1" ,"2" ,"3",
+        "4" ,"5" ,"6" ,
         "7", "8", "9"]
-
-# Function to check if player input is valid
-
-
 
 def game(board):
     print (board[0] + " | " + board[1] + " | "+ board[2])
@@ -35,8 +31,28 @@ def game(board):
 
 game(board)
 
+# Function to check if the current player has won
+def check_winner(board, player):
+    # Define the winning combinations
+    win_combinations = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],  # Rows
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],  # Columns
+        [0, 4, 8], [2, 4, 6]              # Diagonals
+    ]
+    # Check each winning condition
+    for combination in win_combinations:
+        if all(board[pos] == player for pos in combination):
+            return True
+    return False
 
-def player_input(board, player_name, player_symbol):
+
+# 'pos' is used to iterate over all the positions of the cells on the game board to check if any cell is still empty
+
+def check_tie(board):
+    return all(pos != "1" and pos != "2" and pos != "3" and pos != "4" and pos != "5" and pos != "6" and pos != "7" and pos != "8" and pos != "9" for pos in board)
+
+# Function to check if player input is valid
+def player_input(board, player_name , player_symbol):
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         game(board)
