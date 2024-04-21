@@ -1,16 +1,20 @@
+import os
 
 # Enter Username
-def user_name():
-    print("Hi there ! Ready to Play?")
-    username = input("Enter your username: ")
-    print(f"Welcome, {username}! Let's start !.\n")
+def user_names():
+    print("Hi there! Ready to Play?")
+    username1 = input("Enter username for Player 1 (X): ")
+    username2 = input("Enter username for Player 2 (O): ")
+    print(f"Welcome, {username1} and {username2}! Let's start!\n")
+    return username1, username2
 
-user_name()
+user_names()
 
 # Define current player
 
 current_player = "X"
 game_play = True
+winner = None
 
 
 #Drawing a game board using array and index
@@ -32,24 +36,22 @@ def game(board):
 game(board)
 
 
-def player_input(board):
-    move_x = int(input('Enter a number from 1 to 9 : '))
-    if move_x >= 1 and move_x <= 9 and board[move_x-1] != "X" and board[move_x-1] != "O":  
-        board[move_x-1] = current_player
-    # inp-1 is due to index is starting from 0 -8
-    else:
-        print("This place is already taken or the input is invalid")
+def player_input(board, player_name, player_symbol):
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        game(board)
+        move_x = input(f'{player_name}, enter a number from 1 to 9: ')
+        if move_x.isdigit():
+            move_x = int(move_x)
+            if move_x >= 1 and move_x <= 9 and board[move_x-1] != "X" and board[move_x-1] != "O":
+                board[move_x-1] = player_symbol
+                break
+            else:
+                print("This place is already taken or the input is invalid")
+        else:
+            print("Invalid input. Please enter a number.")
 
-print (player_input(board))
 
-# Main game loop
-
-while game_play:
-    game(board)
-    player_input(board)
-
-
-# Handle Horizontal Cases
 
 
 
