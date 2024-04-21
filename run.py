@@ -1,5 +1,13 @@
 
-# Drawing a game board from board array
+# Enter Username
+def user_name():
+    print("Hi there ! Ready to Play?")
+    username = input("Enter your username: ")
+    print(f"Welcome, {username}! Let's start !.\n")
+
+user_name()
+
+#Drawing a game board using array and index
 
 def game():
     board =["-" , "-" ,"-",
@@ -11,7 +19,17 @@ def game():
     print ("----------")
     print(board[6] + " | " + board[7] + " | " + board[8])
 
-print (game())
+game()
+
+
+
+
+
+
+
+
+
+
 
 
 
