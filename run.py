@@ -52,20 +52,20 @@ def check_winner(board, player):
 def check_tie(board):
     return all(pos != "1" and pos != "2" and pos != "3" and pos != "4" and pos != "5" and pos != "6" and pos != "7" and pos != "8" and pos != "9" for pos in board)
 
-# Function to check if player input is valid
+# Function to check if player input is valid , "os.system" for updating the board instead of redisplaying on each input
 def player_input(board, player_name, player_symbol):
-    while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
+    while True: 
         game(board)
         try:
-            inp = int(input(f'{player_name}, enter a number from 1 to 9: '))
-            if inp >= 1 and inp <= 9 and board[inp-1] not in ["X", "O"]:
+            inp = int(input(f'{player_name}, enter a number from 1 to 9: \n'))
+            if inp >= 1 and inp <= 9 and board[inp-1] !="X" and board[inp-1] != "O":
                 board[inp-1] = player_symbol
                 break
             else:
                 print("This place is already taken or the input is invalid.\n")
         except ValueError:
-            print("Invalid input. Please enter a number.\n")
+            print("Invalid input. Please enter a number between 1 and 9.\n")
 
 # Main game logic
 def main():
@@ -76,7 +76,7 @@ def main():
              "4", "5", "6",
              "7", "8", "9"]
     
-    game(board)  # Display the initial board
+    game(board)  # Displays the initial board
     while True:
         player_input(board, username1 if current_player == "X" else username2, current_player)
         if check_winner(board, current_player):
