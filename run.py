@@ -57,15 +57,14 @@ def player_input(board, player_name, player_symbol):
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         game(board)
-        move_x = input(f'{player_name}, enter a number from 1 to 9: \n')
-        if move_x.isdigit():
-            move_x = int(move_x)
-            if move_x >= 1 and move_x <= 9 and board[move_x-1] != "X" and board[move_x-1] != "O":
-                board[move_x-1] = player_symbol
+        try:
+            inp = int(input(f'{player_name}, enter a number from 1 to 9: '))
+            if inp >= 1 and inp <= 9 and board[inp-1] not in ["X", "O"]:
+                board[inp-1] = player_symbol
                 break
             else:
-                print("This place is already taken or the input is invalid \n")
-        else:
+                print("This place is already taken or the input is invalid.\n")
+        except ValueError:
             print("Invalid input. Please enter a number.\n")
 
 # Main game logic
