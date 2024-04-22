@@ -6,20 +6,20 @@ print ( "===============================")
 
 # Enter Username and displays a message if no valid username is entered
 def user_names():
-    print("Hello! Ready to Play?")
+    print("Hello! Ready to Play?\n")
     while True:
-        username1 = input("Enter username - Player 1 (X): ")
+        username1 = input("Enter username - Player 1 (X): \n")
         if username1:
             break
         else:
-            print("Enter a valid username for Player 1.")
+            print("Enter a valid username for Player 1.\n")
 
     while True:
-        username2 = input("Enter username - Player 2 (O): ")
+        username2 = input("Enter username - Player 2 (O): \n")
         if username2:
             break
         else:
-            print("Enter a valid username for Player 2.")
+            print("Enter a valid username for Player 2.\n")
 
     print(f"Welcome, {username1} and {username2}! Let's start!\n")
     return username1, username2
@@ -57,17 +57,16 @@ def player_input(board, player_name, player_symbol):
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         game(board)
-        move_x = input(f'{player_name}, enter a number from 1 to 9: ')
+        move_x = input(f'{player_name}, enter a number from 1 to 9: \n')
         if move_x.isdigit():
             move_x = int(move_x)
             if move_x >= 1 and move_x <= 9 and board[move_x-1] != "X" and board[move_x-1] != "O":
                 board[move_x-1] = player_symbol
                 break
             else:
-                print("This place is already taken or the input is invalid")
+                print("This place is already taken or the input is invalid \n")
         else:
-            print("Invalid input. Please enter a number.")
-    
+            print("Invalid input. Please enter a number.\n")
 
 # Main game logic
 def main():
@@ -90,15 +89,15 @@ def main():
 
     game(board)  # Display the final board
     if winner:
-        print(f"Congratulations, {username1 if winner == 'X' else username2}! You win!")
+        print(f"Congratulations, {username1 if winner == 'X' else username2}! You win!\n")
     else:
-        print("It's a tie!")
+        print("It's a tie!\n")
     
-    play_again = input("Do you want to play again? (y/n): ").lower()
+    play_again = input("Do you want to play again? (y/n):\n").lower()
     if play_again == "y":
         main()
     else:
-        print("Thanks for playing!")
+        print("Thanks for playing!\n")
 
  # Checks if the script is being run directly, it calls the main() function, which is the main logic of the game
 if __name__ == "__main__":
