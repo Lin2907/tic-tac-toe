@@ -92,18 +92,23 @@ def main():
     else:
         print("It's a tie!\n")
     
-    play_again = input("Do you want to play again? (y/n):\n").lower()
-    if play_again == "y":
-        main()
-    elif play_again == "n":
-        print("Thanks for playing!\n")
-    else: 
-        print ("Invalid input. Please enter 'y' to play again or 'n' to exit the game")
+def play_again():
+     while True:
+        play_again = input("Do you want to play again? (y/n):\n").lower()
+        if play_again == "y":
+            main()
+        elif play_again == "n":
+            print("Thanks for playing!\n")
+            break
+        else:
+            print("Invalid input. Please enter 'y' to play again or 'n' to quit.\n")
 
 
  # Checks if the script is being run directly, it calls the main() function, which is the main logic of the game
 if __name__ == "__main__":
     main()
+    play_again()
+    
 
 
 
