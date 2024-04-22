@@ -63,7 +63,7 @@ def player_input(board, player_name, player_symbol):
                 board[inp-1] = player_symbol
                 break
             else:
-                print("This place is already taken or the input is invalid.\n")
+                print("This place is already taken or or the number chosen is not within the range of 1 to 9.\n")
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 9.\n")
 
@@ -95,8 +95,11 @@ def main():
     play_again = input("Do you want to play again? (y/n):\n").lower()
     if play_again == "y":
         main()
-    else:
+    elif play_again == "n":
         print("Thanks for playing!\n")
+    else: 
+        print ("Invalid input. Please enter 'y' to play again or 'n' to exit the game")
+
 
  # Checks if the script is being run directly, it calls the main() function, which is the main logic of the game
 if __name__ == "__main__":
