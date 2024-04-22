@@ -1,10 +1,12 @@
 import os
 
-print ( "===============================")
-print ( "  Welcome to Tic Tac Toe Game  ")
-print ( "===============================")
+print("===============================")
+print("  Welcome to Tic Tac Toe Game  ")
+print("===============================")
 
 # Enter Username and displays a message if no valid username is entered
+
+
 def user_names():
     print("Hello! Ready to Play?\n")
     while True:
@@ -24,12 +26,13 @@ def user_names():
     print(f"Welcome, {username1} and {username2}! Let's start!\n")
     return username1, username2
 
+
 def game(board):
-    print (board[0] + "  |  " + board[1] + "  |  " + board[2])
-    print ("--------------")
-    print (board[3] + "  |  " + board[4] + "  |  " + board[5])
-    print ("--------------")
-    print (board[6] + "  |  " + board[7] + "  |  " + board[8])
+    print(board[0] + "  |  " + board[1] + "  |  " + board[2])
+    print("--------------")
+    print(board[3] + "  |  " + board[4] + "  |  " + board[5])
+    print("--------------")
+    print(board[6] + "  |  " + board[7] + "  |  " + board[8])
 
 
 # Function to check the winner
@@ -47,27 +50,34 @@ def check_winner(board, player):
     return False
 
 
-# 'pos' is used to iterate over all the positions of the cells on the game board to check if any cell is still empty
+# 'pos' is used to iterate over all the positions of the cells
 
 def check_tie(board):
-    return all(pos != "1" and pos != "2" and pos != "3" and pos != "4" and pos != "5" and pos != "6" and pos != "7" and pos != "8" and pos != "9" for pos in board)
+    return all(pos != "1" and pos != "2" and pos != "3" and
+               pos != "4" and pos != "5" and pos != "6" and
+               pos != "7" and pos != "8" and pos != "9" for pos in board)
 
-# Function to check if player input is valid , "os.system" for updating the board instead of redisplaying on each input
+# Function to check if player input is valid
+
+
 def player_input(board, player_name, player_symbol):
     os.system('cls' if os.name == 'nt' else 'clear')
-    while True: 
+    while True:
         game(board)
         try:
             inp = int(input(f'{player_name}, enter a number from 1 to 9: \n'))
-            if inp >= 1 and inp <= 9 and board[inp-1] !="X" and board[inp-1] != "O":
-                board[inp-1] = player_symbol
+            if 1 <= inp <= 9 and board[inp - 1] not in ["X", "O"]:
+                board[inp - 1] = player_symbol
                 break
-            else:
-                print("This place is already taken or or the number chosen is not within the range of 1 to 9.\n")
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 9.\n")
+        else:
+            print("This place is already taken or number not in range.\n")
+
 
 # Main game logic
+
+
 def main():
     username1, username2 = user_names()
     current_player = "X"
@@ -75,10 +85,11 @@ def main():
     board = ["1", "2", "3",
              "4", "5", "6",
              "7", "8", "9"]
-    
+
     game(board)  # Displays the initial board
     while True:
-        player_input(board, username1 if current_player == "X" else username2, current_player)
+        player_input(board, username1 if current_player == "X" else
+                     username2, current_player)
         if check_winner(board, current_player):
             winner = current_player
             break
@@ -88,12 +99,14 @@ def main():
 
     game(board)  # Display the final board
     if winner:
-        print(f"Congratulations, {username1 if winner == 'X' else username2}! You win!\n")
+        print(f"Congratulations,{username1 if winner == 'X'else username2}!\n")
+        print("You win!\n")
     else:
         print("It's a tie!\n")
-    
+
+
 def play_again():
-     while True:
+    while True:
         play_again = input("Do you want to play again? (y/n):\n").lower()
         if play_again == "y":
             main()
@@ -101,14 +114,15 @@ def play_again():
             print("Thanks for playing!\n")
             break
         else:
-            print("Invalid input. Please enter 'y' to play again or 'n' to quit.\n")
+            print("Please enter 'y' to play again or 'n' to quit.\n")
+
+# Calls the main() function, which is the main logic of the game
 
 
- # Checks if the script is being run directly, it calls the main() function, which is the main logic of the game
 if __name__ == "__main__":
     main()
     play_again()
-    
+
 
 
 
