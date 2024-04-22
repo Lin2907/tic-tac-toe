@@ -1,5 +1,9 @@
 import os
 
+print ( "===============================")
+print ( "  Welcome to Tic Tac Toe Game  ")
+print ( "===============================")
+
 # Enter Username and displays a message if no valid username is entered
 def user_names():
     print("Hello! Ready to Play?")
