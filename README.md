@@ -73,7 +73,7 @@ Manually tested this project by doing the following:
 ### Bugs
 
 #### Solved bugs
- + When I wrote the code, the invalid inputs messages were not displaying. I fixed this by re-arranging the function and removing the  `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop and placing it outside of the loop. This adjustment allows for the display of warning messages for invalid inputs.
+ + When I wrote the `user_input` function code, the invalid inputs warning messages were not displaying. I fixed this by re-arranging the function and removing the  `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop and placing it outside of the loop. This adjustment allowed for the display of warning messages for invalid inputs.
 
  + On game ending , if user entered anything else instead of y/n , the game was exiting completely. I resolved this by adding `def play_again():` function and by calling it after main function is executed.
 
@@ -96,18 +96,15 @@ When I created the app, I added two buildpacks from the _Settings_ tab. The orde
 
 1. `heroku/python`
 2. `heroku/nodejs`
-
-I then created a _Config Var_ called `PORT`and set this to `8000`
+3. Created a _Config Var_ called `PORT`and set this to `8000`
 
 Connected to my GitHub repository and deployed the project.
-
-### Deployment steps
 
 This project was deployed using Code Institute's mock terminal for Heroku.
 
  + Steps for deployment:
-   + Fork or clone repository
-   + Create  anew Heroku app
+
+   + Create a new Heroku app
    + Set the buildbacks to `Python` and `Node.js` in that order
    + Link the Heroku app to the repository
    + Click on Deploy
