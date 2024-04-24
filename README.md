@@ -70,6 +70,12 @@ Manually tested this project by doing the following:
 + Invalid inputs: strings when numbers are expected ,out of bound inputs, same input twice
 + Tested in my local terminal and the Code Institute Heroku Terminal
 
+### Accessibility
+
+<img src = "media/accessibility.png">
+<br>
+
+
 ### Bugs
 
 #### Solved bugs
@@ -85,6 +91,7 @@ Manually tested this project by doing the following:
 
  + PEP8
    + No errors were returned from PEP8 validator.
+
 
 <img src = "media/validator.png" alt ="Validator Python">
 
