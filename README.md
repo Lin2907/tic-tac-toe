@@ -43,7 +43,6 @@ The  live version of my project can be found under the following link [Tic Tac T
 ## Features left to implement
   + Graphic Design
      + Design custom symbols for 'X' and 'O'
-     + Graphical User Interface (GUI)
      + Develop a user-friendly graphical interface using a Python GUI library such as Tkinter or Kivy.
 
 ## Data Model
@@ -51,6 +50,7 @@ The  live version of my project can be found under the following link [Tic Tac T
  + The board represents the current configuration of the Tic Tac Toe game board.
  + It can be represented as a list or array containing nine elements (numbers), each corresponding to a cell on the 3x3 grid.
  + Each cell can have one of three values: 'X' (Player 1), 'O' (Player 2), or '1-9 ' (Number).
+
 
 ## Technology Used
  + Python 3.0
@@ -85,3 +85,34 @@ Manually tested this project by doing the following:
 
 <img src = "media/validator.png" alt ="Validator Python">
 
+## Deployment
+
+### Creating the Heroku app
+
+When I created the app, I added two buildpacks from the _Settings_ tab. The ordering is as follows:
+
+1. `heroku/python`
+2. `heroku/nodejs`
+
+I then created a _Config Var_ called `PORT`and set this to `8000`
+
+Connected to my GitHub repository and deployed the project.
+
+### Deployment steps
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+ + Steps for deployment:
+   + Fork or clone repository
+   + Create  anew Heroku app
+   + Set the buildbacks to `Python` and `Node.js` in that order
+   + Link the Heroku app to the repository
+   + Click on Deploy
+
+## Credits
+
+ + Code Institute for the deployment terminal and deployment section in this document.
+ + Flowchart is created with https://lucid.co/ .
+ + Solution for not re-displaying the board again but instead updating on correct input by using`import os` [Official Python documentation](https://docs.python.org/3/library/os.html) and [Tutorial for building a python project](https://www.youtube.com/watch?v=Q6CCdCBVypg). Please note, the approach itself is different.
+
+Enjoy the game !
