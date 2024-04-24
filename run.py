@@ -116,9 +116,6 @@ def play_again():
         else:
             print("Please enter 'y' to play again or 'n' to quit.\n")
 
-# Calls the main() function, which is the main logic of the game
-
-
 if __name__ == "__main__":
     main()
     play_again()
