@@ -51,6 +51,9 @@ The  live version of my project can be found under the following link [Tic Tac T
  + It can be represented as a list or array containing nine elements (numbers), each corresponding to a cell on the 3x3 grid.
  + Each cell can have one of three values: 'X' (Player 1), 'O' (Player 2), or '1-9 ' (Number).
 
+## Flowchart
+
+<img src ="media/flowchart.png" alt="Flowchart">
 
 ## Technology Used
  + Python 3.0
