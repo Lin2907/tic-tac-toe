@@ -7,9 +7,13 @@ def instructions():
     print("The first player who matches three of their symbols in a row, column, or diagonal wins.\n")
     print("If all fields are filled and no player has won, the game ends in a tie.\n")
 
-print("===============================")
-print("  Welcome to Tic Tac Toe Game  ")
-print("===============================")
+# Initial screen with options for player
+
+
+def start_game():
+    print("===============================")
+    print("  Welcome to Tic Tac Toe Game  ")
+    print("===============================")
 
 # Enter Username and displays a message if no valid username is entered
 
