@@ -18,19 +18,18 @@ def user_names():
     print("Hello! Ready to Play?\n")
     while True:
         username1 = input("Enter username - Player 1 (X): \n")
-        if username1:
+        if valid_username(username1):
             break
         else:
-            print("Enter a valid username for Player 1.\n")
+            print("Invalid input. Username must be between 2 and 10 letters only.\n")
 
     while True:
         username2 = input("Enter username - Player 2 (O): \n")
-        if username2:
+        if valid_username(username2):
             break
         else:
-            print("Enter a valid username for Player 2.\n")
+            print("Invalid input. Username must be between 2 and 10 letters only.\n")
 
-    print(f"Welcome, {username1} and {username2}! Let's start!\n")
     return username1, username2
 
 
