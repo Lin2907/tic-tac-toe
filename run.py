@@ -14,7 +14,7 @@ def start_game():
     print("===============================")
     print("  Welcome to Tic Tac Toe Game  ")
     print("===============================")
-    print("Welcome")
+    print("Hello!")
     while True:
         print("Choose an option:")
         print("1. Instructions")
