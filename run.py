@@ -7,6 +7,13 @@ print("===============================")
 # Enter Username and displays a message if no valid username is entered
 
 
+def valid_username(username):
+    if len(username) < 2 or len(username) > 10:
+        return False
+    if not username.isalpha():
+        return False
+    return True
+
 def user_names():
     print("Hello! Ready to Play?\n")
     while True:
