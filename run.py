@@ -1,5 +1,12 @@
 import os
 
+def instructions():
+    print("Game Instructions:")
+    print("The game is played by 2 Players and on a 3x3 board.\n")
+    print("Players take turns marking a field with their symbol ('X' or 'O').\n")
+    print("The first player who matches three of their symbols in a row, column, or diagonal wins.\n")
+    print("If all fields are filled and no player has won, the game ends in a tie.\n")
+
 print("===============================")
 print("  Welcome to Tic Tac Toe Game  ")
 print("===============================")
