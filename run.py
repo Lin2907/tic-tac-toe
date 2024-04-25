@@ -146,7 +146,7 @@ def play_again():
             main()
         elif play_again == "n":
             print("Thanks for playing!\n")
-            break
+            exit()
         else:
             print("Please enter 'y' to play again or 'n' to quit.\n")
 
