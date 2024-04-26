@@ -19,7 +19,7 @@ The  live version of my project can be found under the following link [Tic Tac T
   + Two-player gameplay.
   + Players must input their usernames.
 
-   <img src ="media/start.png" alt ="Initital game display">
+   <img src ="media/start-screen.png" alt ="Initital game display">
 
   + Assignment of 'X' and 'O' symbols to players.
 
