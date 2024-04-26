@@ -17,9 +17,9 @@ def start_game():
     print("Hello!")
     while True:
         print("Choose an option:")
-        print("1. Instructions")
-        print("2. Start Game")
-        print("3. Quit")
+        print("1 for the Instructions")
+        print("2 to Start the Game")
+        print("3 to Quit")
         option = input("Enter your option: ")
         if option == "1":
             instructions()
