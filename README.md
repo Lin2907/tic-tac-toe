@@ -14,16 +14,41 @@ The  live version of my project can be found under the following link [Tic Tac T
  + If a player wins, the game will announce the winner, or a tie.
  + After the game ends, players can choose to play again or exit.
 
+## Flowchart
+
+<img src ="media/flowchart.png" alt="Flowchart">
+
+## User Experience (UX)
+
+Tic Tac Toe is a classic game that provides a simple yet entertaining user experience. The user is presented with the 3x3 board with each square having assigned a number from 1 to 9. They have to enter a number, one after another. With each input, the X or O letter is asigned to a square. The first player to align three of their symbols horizontally, vertically, or diagonally wins the game. If all squares are filled without any player achieving three in a row, the game ends in a tie.
+
+### User Stories
+
+#### First-time visitor goals
+  + Understand how the game works. Clear instructions and what the objective of the game is.
+
+#### Clear and intuitive interface
+ + Play against another human player. Once the users understands the game, they will likely want to play it.
+
+#### Enjoy the experience
+ + The Tic Tac Toe game should be engaging and fun for the users.
+
+
 
 ## Existing Features
   + Two-player gameplay.
   + Players must input their usernames.
 
    <img src ="media/start-screen.png" alt ="Initital game display">
+  
+  + Game Instructions displaying if user presses "1".
 
-  + Assignment of 'X' and 'O' symbols to players.
+  <img src ="media/instructions.png" alt = "Game instructions display">
 
-  <img src ="media/user-name.png" alt ="Prompt usernames for X and O">
+  + Promting Username and validating for invalid input.
+
+  <img src ="media/input-validation-start.png" alt="Username input and validation">
+
  
   + Updating the board accordingly on players input.
 
@@ -35,7 +60,7 @@ The  live version of my project can be found under the following link [Tic Tac T
 
 <img src ="media/invalid-input.png" alt = "Input validation message">
 
-+ Game end promts the user to enter y/n for play again or exit the game.
++ Game end announce the winner or tie accordingly and promts the user to enter y/n for play again or exit the game.
 + User must enter 'y' or 'n' otherwise error message is displayed.
 
 <img src ="media/end-game.png">
@@ -51,10 +76,6 @@ The  live version of my project can be found under the following link [Tic Tac T
  + It can be represented as a list or array containing nine elements (numbers), each corresponding to a cell on the 3x3 grid.
  + Each cell can have one of three values: 'X' (Player 1), 'O' (Player 2), or '1-9 ' (Number).
 
-## Flowchart
-
-<img src ="media/flowchart.png" alt="Flowchart">
-
 ## Technology Used
  + Python 3.0
  + GitHub , Gitpod
@@ -66,22 +87,33 @@ The  live version of my project can be found under the following link [Tic Tac T
 ## Testing
 
 Manually tested this project by doing the following:
+
 + Passed the code through PEP8 linter and confirmed there are no issues.
-+ Invalid inputs: strings when numbers are expected ,out of bound inputs, same input twice
++ Username input validation: Username can consist of alpha characters only, length 2-10 letters.
++ Invalid inputs: strings when numbers are expected ,out of bound inputs, same input twice.
 + Tested in my local terminal and the Code Institute Heroku Terminal
-
-### Accessibility
-
-<img src = "media/accessibility.png">
-<br>
 
 
 ### Bugs
 
-#### Solved bugs
- + When I wrote the `user_input` function code, the invalid inputs warning messages were not displaying. I fixed this by re-arranging the function and removing the  `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop and placing it outside of the loop. This adjustment allowed for the display of warning messages for invalid inputs.
+#### Fixed bugs
 
- + On game ending , if user entered anything else instead of y/n , the game was exiting completely. I resolved this by adding `def play_again():` function and by calling it after main function is executed.
+
+
+
+| Feature      | Expected Result                 | Steps Taken                                            | Actual Result       |
+|:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
+| User input   | Invalid input message display  | Removed `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop | Invalid message display |
+| Game ending    | On invalid user input instead of y/n, game exiting completely                        | Add `play_again()`function and calling it after main function is executed | Displaying the end game message                                                  |                     |
+| zebra stripes| are neat                        | $1                                                                            |                     |
+
+
+     
+
+
+
+
+
 
  #### Remaining Bugs
 
