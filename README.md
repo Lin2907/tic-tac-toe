@@ -128,27 +128,35 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 
 ### Creating the Heroku app
 
-When I created the app, I added two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-3. Created a _Config Var_ called `PORT`and set this to `8000`
-
-Connected to my GitHub repository and deployed the project.
-
 This project was deployed using Code Institute's mock terminal for Heroku.
 
  + Steps for deployment:
 
    + Create a new Heroku app
    + Set the buildbacks to `Python` and `Node.js` in that order
+   + Create a _Config Var_ called `PORT`and set this to `8000`
    + Link the Heroku app to the repository
    + Click on Deploy
+
+### Forking the repository
+In order to fork the repository to make a copy the steps are:
+
+1. Log into GitHub and locate the repository for https://github.com/Lin2907/tic-tac-toe
+2. At the top of the repository above settings locate the 'Fork' button There is now a copy of the repository in the Github account
+
+ ### Cloning the repository
+1. On GitHub navigate to the main page of the repository
+2. Above the list of files click the dropdown code menu
+3. Select the https option and copy the link
+4. Open the GitPod Bash terminal
+5. Change the current working directory to the desired destination location
+6. Type the git clone command with the copied URL.
+7. Press enter to create the local clone
 
 ## Credits
 
  + Code Institute for the deployment terminal and deployment section in this document.
  + Flowchart is created with https://lucid.co/ .
- + Solution for not re-displaying the board again but instead updating on correct input by using`import os` [Official Python documentation](https://docs.python.org/3/library/os.html) and [Tutorial for building a python project](https://www.youtube.com/watch?v=Q6CCdCBVypg). Please note, the approach itself is different.
+ + Solution for not re-displaying the board again but instead updating the board on correct input by using`import os` [Official Python documentation](https://docs.python.org/3/library/os.html) and [Tutorial for building a python project](https://www.youtube.com/watch?v=Q6CCdCBVypg). Please note, the approach itself is different.
 
 Enjoy the game !
