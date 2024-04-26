@@ -17,7 +17,7 @@ def start_game():
     print("Hello!\n")
     while True:
         print("Choose an option:\n")
-        print("1. Instructions \n")
+        print("1. Instructions\n")
         print("2. Start the Game\n")
         print("3. Quit\n")
         option = input("Enter your option: \n")
