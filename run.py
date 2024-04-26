@@ -11,28 +11,28 @@ def instructions():
 
 
 def start_game():
-    print("===============================")
-    print("  Welcome to Tic Tac Toe Game  ")
-    print("===============================")
-    print("Hello!")
+    print("===============================\n")
+    print("  Welcome to Tic Tac Toe Game  \n")
+    print("===============================\n")
+    print("Hello!\n")
     while True:
-        print("Choose an option:")
-        print("1 for the Instructions")
-        print("2 to Start the Game")
-        print("3 to Quit")
-        option = input("Enter your option: ")
+        print("Choose an option: \n")
+        print("1 for the Instructions \n")
+        print("2 to Start the Game\n")
+        print("3 to Quit\n")
+        option = input("Enter your option: \n")
         if option == "1":
             instructions()
         elif option == "2":
             main()
             play_again()    
         elif option == "3":
-            print("Bye!")
+            print("Bye!\n")
             break
         else:
-            print("Invalid input. Please choose 1, 2, or 3.")
+            print("Invalid input. Please choose 1, 2, or 3.\n")
 
-# Enter Username and displays a message if no valid username is entered
+# Enters Username and displays a message if no valid username is entered
 
 
 def valid_username(username):
@@ -43,7 +43,7 @@ def valid_username(username):
     return True
 
 def user_names():
-    print("Hello! Ready to Play?\n")
+    print("Ready to Play?\n")
     while True:
         username1 = input("Enter username - Player 1 (X): \n")
         if valid_username(username1):
