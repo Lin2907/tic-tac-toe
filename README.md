@@ -20,7 +20,7 @@ The  live version of my project can be found under the following link [Tic Tac T
 
 ## User Experience (UX)
 
-Tic Tac Toe is a classic game that provides a simple yet entertaining user experience. The user is presented with the 3x3 board with each square having assigned a number from 1 to 9. They have to enter a number, one after another. With each input, the X or O letter is asigned to a square. The first player to align three of their symbols horizontally, vertically, or diagonally wins the game. If all squares are filled without any player achieving three in a row, the game ends in a tie.
+Tic Tac Toe is a classic game that provides a simple yet entertaining user experience. The user is presented with the 3x3 board with each square having assigned a number from 1 to 9. The players need to enter a number 1 to 9, one after another. With each input, the X or O letter is asigned to a square. The first player who manage to align three of their symbols horizontally, vertically, or diagonally wins the game. If all squares are filled without any player achieving three in a row, the game ends in a tie.
 
 ### User Stories
 
@@ -36,8 +36,8 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 
 
 ## Existing Features
-  + Two-player gameplay.
-  + Players must input their usernames.
+  + Initial Welcome screen prompting the players to choose between 3 options given
+ 
 
    <img src ="media/start-screen.png" alt ="Initital game display">
   
@@ -45,7 +45,7 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 
   <img src ="media/instructions.png" alt = "Game instructions display">
 
-  + Promting Username and validating for invalid input.
+  + Prompting Username on "Start the Game" option and validating for invalid input.
 
   <img src ="media/input-validation-start.png" alt="Username input and validation">
 
@@ -93,9 +93,9 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 | Username input validation   |  Username can consist of alpha characters only, length 2-10 letters.Otherwise, invalid input message is displayed | Tested by entering numbers, spaces longer strings and no input | Invalid message displays as expected |
 | Initial display options on game start | By entering 1,2 or 3 different options should be displayed | Tested all 3 options are functional | Functional as expected|
 |Invalid inputs during playing | Warning message if strings when numbers are expected ,out of bound inputs, same input twice| Tested all the options for functionality | The warning messages are displayed as expected and the player is promted to enter the number again |
-|
 
-<br>
+
+
 
 ## Bugs
 
@@ -109,7 +109,7 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 | Instructions | By presing "1" the instructions are displayed , previously functional , not showing in local terminal | No change in code needed , pushed the changes to GitHub only| Instructions displaying as expected |
 |Player input | Invalid input message not showing as expected | Fix false Indentation and add `try` and `except ValueError` into While loop instead of `else` twice| Displaying the message as expected
 |PEP8 Liner  | Multiple indentation and blanc space errors | Removed blanc spaces and shorthanded the function conditions where above 79 characters | No errors
-|  |
+
 
 
 ### Remaining Bugs
