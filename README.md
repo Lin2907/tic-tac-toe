@@ -105,7 +105,7 @@ Manually tested this project by doing the following:
 |:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
 | User input   | Invalid input message display  | Removed `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop | Invalid message display |
 | Game ending    | On invalid user input instead of y/n, game exiting completely                        | Add `play_again()`function and calling it after main function is executed | Displaying the end game message                                                  |                     |
-| zebra stripes| are neat                        | $1                                                                            |                     |
+| zebra stripes| are neat                        |                                                                   |                     |
 
 
      
