@@ -1,7 +1,7 @@
 import os
 
 def instructions():
-    print("Game Instructions:")
+    print("Game Instructions:\n")
     print("The game is played by 2 Players and on a 3x3 board.\n")
     print("Players take turns marking a field with their symbol ('X' or 'O').\n")
     print("The first player who matches three of their symbols in a row, column, or diagonal wins.\n")
@@ -16,10 +16,10 @@ def start_game():
     print("===============================\n")
     print("Hello!\n")
     while True:
-        print("Choose an option: \n")
-        print("1 for the Instructions \n")
-        print("2 to Start the Game\n")
-        print("3 to Quit\n")
+        print("Choose an option:\n")
+        print("1. Instructions \n")
+        print("2. Start the Game\n")
+        print("3. Quit\n")
         option = input("Enter your option: \n")
         if option == "1":
             instructions()
