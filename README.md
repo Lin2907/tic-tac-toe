@@ -86,22 +86,25 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 
 ## Testing
 
-Manually tested this project by doing the following:
+### Manual Testing
 
-+ Passed the code through PEP8 linter and confirmed there are no issues.
-+ Username input validation: Username can consist of alpha characters only, length 2-10 letters.
-+ Invalid inputs: strings when numbers are expected ,out of bound inputs, same input twice.
-+ Tested in my local terminal and the Code Institute Heroku Terminal
+| Feature      | Expected Result               | Steps Taken             | Actual Result       |
+|:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
+| Username input validation   |  Username can consist of alpha characters only, length 2-10 letters.Otherwise, invalid input message is displayed | Tested by entering numbers, spaces longer strings and no input | Invalid message displays as expected |
+| Initial display options on game start | By entering 1,2 or 3 different options should be displayed | Tested all 3 options are functional | Functional as expected|
+|Invalid inputs during playing | Warning message if strings when numbers are expected ,out of bound inputs, same input twice| Tested all the options for functionality | The warning messages are displayed as expected and the player is promted to enter the number again |
+|
 
+<br>
 
 ## Bugs
 
 ### Fixed bugs
 
-| Feature      | Issue                | Steps Taken                                            | Actual Result       |
+| Feature      | Issue                | Steps Taken             | Actual Result       |
 |:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
 | User input   | Invalid input message display not shown | Removed `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop | Invalid message displays as expected |
-| Game ending    | On invalid user input instead of y/n messages, game exiting completely      | Add `play_again()`function and calling it after main function is executed | Displaying the end game message                                                  |                     |
+| Game end options | On invalid user input instead of y/n messages, game exiting completely  | Add `play_again()`function and calling it after main function is executed | Displaying the end game message                                                
 | Play again    | 'Thanks for playing' message after adding `start_game` function is not displaying as expected   |   Replaced 'break' in `play_again` function with function exit()| End message displaying as expected |
 | Instructions | By presing "1" the instructions are displayed , previously functional , not showing in local terminal | No change in code needed , pushed the changes to GitHub only| Instructions displaying as expected |
 |Player input | Invalid input message not showing as expected | Fix false Indentation and add `try` and `except ValueError` into While loop instead of `else` twice| Displaying the message as expected
