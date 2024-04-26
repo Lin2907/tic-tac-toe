@@ -94,28 +94,22 @@ Manually tested this project by doing the following:
 + Tested in my local terminal and the Code Institute Heroku Terminal
 
 
-### Bugs
+## Bugs
 
-#### Fixed bugs
+### Fixed bugs
 
-
-
-
-| Feature      | Expected Result                 | Steps Taken                                            | Actual Result       |
+| Feature      | Issue                | Steps Taken                                            | Actual Result       |
 |:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
-| User input   | Invalid input message display  | Removed `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop | Invalid message display |
-| Game ending    | On invalid user input instead of y/n, game exiting completely                        | Add `play_again()`function and calling it after main function is executed | Displaying the end game message                                                  |                     |
-| zebra stripes| are neat                        |                                                                   |                     |
+| User input   | Invalid input message display not shown | Removed `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop | Invalid message displays as expected |
+| Game ending    | On invalid user input instead of y/n messages, game exiting completely      | Add `play_again()`function and calling it after main function is executed | Displaying the end game message                                                  |                     |
+| Play again    | 'Thanks for playing' message after adding `start_game` function is not displaying as expected   |   Replaced 'break' in `play_again` function with function exit()| End message displaying as expected |
+| Instructions | By presing "1" the instructions are displayed , previously functional , not showing in local terminal | No change in code needed , pushed the changes to GitHub only| Instructions displaying as expected |
+|Player input | Invalid input message not showing as expected | Fix false Indentation and add `try` and `except ValueError` into While loop instead of `else` twice| Displaying the message as expected
+|PEP8 Liner  | Multiple indentation and blanc space errors | Removed blanc spaces and shorthanded the function conditions where above 79 characters | No errors
+|  |
 
 
-     
-
-
-
-
-
-
- #### Remaining Bugs
+### Remaining Bugs
 
   + No bugs remaining
 
