@@ -90,7 +90,9 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 
 | Feature      | Expected Result               | Steps Taken             | Actual Result       |
 |:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
-| Initial display options on game start | By entering 1,2 or 3 different options should be displayed | Tested all 3 options are functional | Functional as expected|
+| Initial display options on game start | By entering number 1, Game instructions should be displayed | Tested by entering 1 | Instructions are displayed as expected|
+| Initial display options on game start | By entering number 2, player should start the game | Tested by entering number 2| Game starts as expected|
+| Initial display options on game start | By entering number 3, game exits and bye message should be displayed | Tested by entering number 3 | Game ends as expected|
 | Username input validation   |  Username can consist of alpha characters only, length 2-10 letters.Otherwise, invalid input message is displayed | Tested by entering numbers | Invalid message displays as expected |
 | Username input validation | Invalid input message if space or longer/shorter string is entered| Tested by entering space and longer/shorter string values| Invalid message displays as expected|
 | Username input validation | Invalid input message if no input| Tested by pressing "enter" with no input| Invalid message displays as expected|
