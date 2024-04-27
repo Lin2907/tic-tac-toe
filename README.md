@@ -107,14 +107,13 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 
 ### Fixed bugs
 
-| Feature      | Issue                | Steps Taken             | Actual Result       |
+| Feature      | Expected result                | Actual result            | Fix     |
 |:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
-| User input   | Invalid input message display not shown | Removed `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop | Invalid message displays as expected |
-| Game end options | On invalid user input instead of y/n messages, game exiting completely  | Add `play_again()`function and calling it after main function is executed | Displaying the end game message                                                
-| Play again    | 'Thanks for playing' message after adding `start_game` function is not displaying as expected   |   Replaced 'break' in `play_again` function with function exit()| End message displaying as expected |
-| Instructions | By presing "1" the instructions are displayed , previously functional , not showing in local terminal | No change in code needed , pushed the changes to GitHub only| Instructions displaying as expected |
-|Player input | Invalid input message not showing as expected | Fix false Indentation and add `try` and `except ValueError` into While loop instead of `else` twice| Displaying the message as expected
-|PEP8 Liner  | Multiple indentation and blanc space errors | Removed blanc spaces and shorthanded the function conditions where above 79 characters | No errors
+| User input   | Warning message should display on invalid input| Invalid input message is not displaying  | Removed `os.system('cls' if os.name == 'nt' else 'clear')` from inside of While loop |
+| Invalid input on game end if user enters anything else then 'y/n' | Displaying the warning message when user enters anything else except 'y/n' at the end of the game | On invalid user input, game exiting completely | Add `play_again()`function and calling it after main function is executed    |                                           
+| Quit option 'n' on game ending   | 'Thanks for playing' message should be displayed  | 'Thanks for playing' message after adding `start_game` function is not displaying as expected , prompting the user to enter "y/n" again | Replaced 'break' in `play_again` function with function exit()|
+|Player input function | On invalid input , a message is displayed and the player is prompted to enter the number again| Invalid input message not showing as expected | Fix false Indentation and add `try` and `except ValueError` into While loop instead of `else` twice|
+|PEP8 Liner  | No errors | Multiple indentation and blanc space errors| Removed blanc spaces and shorthanded the function conditions where above 79 characters|
 
 
 
