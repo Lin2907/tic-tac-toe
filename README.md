@@ -90,9 +90,13 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 
 | Feature      | Expected Result               | Steps Taken             | Actual Result       |
 |:------------:|:-------------------------------:|:------------------------------------------------------:|:-------------------:|
-| Username input validation   |  Username can consist of alpha characters only, length 2-10 letters.Otherwise, invalid input message is displayed | Tested by entering numbers, spaces longer strings and no input | Invalid message displays as expected |
 | Initial display options on game start | By entering 1,2 or 3 different options should be displayed | Tested all 3 options are functional | Functional as expected|
-|Invalid inputs during playing | Warning message if strings when numbers are expected ,out of bound inputs, same input twice| Tested all the options for functionality | The warning messages are displayed as expected and the player is promted to enter the number again |
+| Username input validation   |  Username can consist of alpha characters only, length 2-10 letters.Otherwise, invalid input message is displayed | Tested by entering numbers | Invalid message displays as expected |
+| Username input validation | Invalid input message if space or longer/shorter string is entered| Tested by entering space and longer/shorter string values| Invalid message displays as expected|
+| Username input validation | Invalid input message if no input| Tested by pressing "enter" with no input| Invalid message displays as expected|
+|Invalid input during playing | Warning message if strings when numbers are expected | Tested by entering strings | The warning message is displayed as expected |
+|Invalid input during playing | Warning message on out of range input| Tested by entering out of range (not 1 -9) numbers| Invalid message displays as expected|
+|Invalid input during playing | Warning message if strings when same input (board possition) is entered twice| Tested by entering the already taken position number | The warning message is displayed as expected |
 
 
 
