@@ -99,6 +99,10 @@ Tic Tac Toe is a classic game that provides a simple yet entertaining user exper
 |Invalid input during playing | Warning message if strings when numbers are expected | Tested by entering strings | The warning message is displayed as expected |
 |Invalid input during playing | Warning message on out of range input| Tested by entering out of range (not 1 -9) numbers| Invalid message displays as expected|
 |Invalid input during playing | Warning message if strings when same input (board possition) is entered twice| Tested by entering the already taken position number | The warning message is displayed as expected |
+|End game option 'y' | Restarting the game if player enters 'y'| Tested by entering 'y' | The game restarts as expected |
+|End game option 'n'|  Exiting the game by displaying the 'Thanks for playing' message| Tested by entering 'n' | The message is displayed and game is ending as expected |
+|End game invalid input | Warning message if anything else instead 'y/n' is entered| Tested by entering numbers, other letters and spaces | The warning message is displayed as expected |
+| Game functionality | Announcing winner / tie by checking the winning / tie combinations| Tested by playing the game , entering 'x' and 'O' positions | The game funcionality is correct
 
 
 
