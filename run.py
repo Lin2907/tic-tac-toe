@@ -1,11 +1,12 @@
 import os
 
+
 def instructions():
     print("Game Instructions:")
     print("The game is played by 2 Players and on a 3x3 board.")
     print("Players take turns marking a field with their symbol ('X' or 'O').")
-    print("The first player who matches three of their symbols in a row, column, or diagonal wins.")
-    print("If all fields are filled and no player has won, the game ends in a tie.")
+    print("The first player who matches three of their symbols wins.")
+    print("If all fields are filled and no winner, the game ends in a tie.")
 
 # Initial screen with options for player
 
@@ -25,7 +26,7 @@ def start_game():
             instructions()
         elif option == "2":
             main()
-            play_again()    
+            play_again()
         elif option == "3":
             print("Bye!\n")
             break
@@ -42,6 +43,7 @@ def valid_username(username):
         return False
     return True
 
+
 def user_names():
     print("Ready to Play?\n")
     while True:
@@ -49,14 +51,14 @@ def user_names():
         if valid_username(username1):
             break
         else:
-            print("Invalid input. Username must be between 2 and 10 letters only.\n")
+            print("Invalid input.Username must be between 2 and 10 letters.\n")
 
     while True:
         username2 = input("Enter username - Player 2 (O): \n")
         if valid_username(username2):
             break
         else:
-            print("Invalid input. Username must be between 2 and 10 letters only.\n")
+            print("Invalid input.Username must be between 2 and 10 letters.\n")
 
     return username1, username2
 
@@ -149,6 +151,7 @@ def play_again():
             exit()
         else:
             print("Please enter 'y' to play again or 'n' to quit.\n")
+
 
 if __name__ == "__main__":
     start_game()
